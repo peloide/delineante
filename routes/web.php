@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+// RUTAS DEL SITIO WEB
+
+Route::get('/', 'PaginasController@inicio')->name('inicio');
+Route::get('/inicio', 'PaginasController@inicio');
+Route::get('/proyectos', 'PaginasController@proyectos')->name('proyectos');
+Route::get('/contacto', 'PaginasController@contacto')->name('contacto');
+Route::get('/mostrar', 'PaginasController@mostrar');
+
+
+// Nos genera todas las rutas
+// Route::resource('post', 'Ejemplo3Controller');
+
