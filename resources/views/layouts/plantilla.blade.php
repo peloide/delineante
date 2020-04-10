@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <div class="container-fluid">
+    <div class="containe">
         <div class="cabecera">
 
             @include('layouts.componentes.navbar')
@@ -19,12 +19,10 @@
     
         </div>
     
-    
-        <div class="infoGeneral">
+        <div class="row infoGeneral d-flex justify-content-center">
             @yield('infoGeneral')
     
         </div>
-    
     
         <div class="footer">
             @include('layouts.componentes.footer')
