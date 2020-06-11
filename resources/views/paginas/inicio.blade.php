@@ -1,3 +1,4 @@
 @extends('layouts.plantilla')
-
-<h1>Bienvenido</h1>
+@section('infoGeneral')
+<h1>Bienvenido</h1>    
+@endsection
