@@ -20,7 +20,6 @@ use Illuminate\Support\Facades\Route;
 // Rutas Paginas COntroller
 Route::get('/', 'PaginasController@inicio')->name('inicio');
 Route::get('/inicio', 'PaginasController@inicio');
-//Route::get('/proyectos', 'PaginasController@proyectos')->name('proyectos');
 Route::get('/contacto', 'PaginasController@contacto')->name('contacto');
 Route::get('/mostrar', 'PaginasController@mostrar');
 
