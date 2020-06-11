@@ -48,9 +48,9 @@ class ProyectosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($pelicula)
+    public function show(Proyecto $proyecto)
     {
-        //
+        return view('proyectos.show', ['proyecto'=>$proyecto]);
     }
 
     /**

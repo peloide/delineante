@@ -11,13 +11,13 @@
     <div class="card-body">
     <h5 class="card-title  d-flex align-item-center">{{ $proyecto->nombre_proyecto }}</h5>
       
-      <a href="#" class="btn btn-primary align-item-center">Detalles</a>
+      <a href="{{ route('proyecto.show',$proyecto) }}" class="btn btn-primary align-item-center">Detalles</a>
 
       <!-- Botón de borrar proyecto -->
       <form class="my-2" action="{{ action('ProyectosController@destroy', $proyecto) }}" method="POST">
           @csrf
           @method('DELETE')
-          <input class="btn btn-danger" value="Borrar" type="submit">                  
+          <input class="btn btn-danger" value="Borrar" type="submit">  
       </form>
 
 

@@ -12,7 +12,7 @@
     <h5 class="card-title  d-flex align-item-center">{{ $proyecto->nombre_proyecto }}</h5>
     <h1>Jorge</h1>
       
-      <a href="#" class="btn btn-primary align-item-center">Detalles</a>
+    <a href=" {{ route('proyecto.show',$proyecto) }}" class="btn btn-primary align-item-center">Detalles</a>
     </div>
   </div>
 </div>
