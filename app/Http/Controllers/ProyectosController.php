@@ -82,8 +82,12 @@ class ProyectosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Proyecto $proyecto)
     {
-        //
+
+        //Borrar proyecto
+
+        $proyecto->delete();
+        return redirect()->route('inicio');
     }
 }

@@ -8,7 +8,8 @@
       <a class="nav-item nav-link active" href="{{url('/inicio')}}">Inicio<span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" href="{{url('/proyectos')}}">Proyectos</a>
         <a class="nav-item nav-link" href="{{url('/contacto')}}">Contacto</a>
-        <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
       </div>
     </div>
   </nav>
+
+

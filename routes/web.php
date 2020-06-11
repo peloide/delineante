@@ -23,8 +23,21 @@ Route::get('/contacto', 'PaginasController@contacto')->name('contacto');
 Route::get('/mostrar', 'PaginasController@mostrar');
 
 
-// Rutas ProyectoController
+
+
 Route::get('/proyectos', 'ProyectosController@index')->name('proyectos.index');
+
+Route::delete('/proyectos/{proyecto}', 'ProyectosController@destroy')->name('proyectos.destroy');
+
+
+
+
+
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+
 
 
 
