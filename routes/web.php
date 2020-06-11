@@ -29,9 +29,9 @@ Route::get('/mostrar', 'PaginasController@mostrar');
 // RUTAS DE LOS PROYECTOS
 Route::get('/proyectos', 'ProyectosController@index')->name('proyectos.index'); // Muestra todos los proyectos
 Route::delete('/proyectos/{proyecto}', 'ProyectosController@destroy')->name('proyectos.destroy'); // Borra el proyecto seleccionado
-Route::get('/proyecto/{proyecto}', 'ProyectosController@show')->name('proyecto.show');
-
-
+Route::get('/proyecto/{proyecto}', 'ProyectosController@show')->name('proyecto.show'); // Mostrar el proyecto seleccionado
+Route::post('proyectos/crear', 'ProyectosController@store')->name('proyectos.store');
+Route::get('/proyectos/crear', 'ProyectosController@create')->name('proyectos.crear');
 
 // RUTAS PARA BORRAR EJEMPLO ARTICULO
 Route::get("/leer", function(){

@@ -17,7 +17,7 @@ class ProyectosController extends Controller
         // Mostramos listado de proyectos
        $proyectos = Proyecto::get();
 
-       return view('paginas.proyectos', compact('proyectos'));
+       return view('proyectos.index', compact('proyectos'));
 
     }
 
@@ -29,6 +29,7 @@ class ProyectosController extends Controller
     public function create()
     {
         //
+        return view('proyectos.create');
     }
 
     /**
@@ -39,7 +40,17 @@ class ProyectosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Proyecto::create($request->validate([
+            'nombre_proyecto' => ['required', 'min:1'],
+            'tipo' => ['required', 'min:1'],
+            'descripcion' => ['required'],
+            'imagen' => ['required'],
+            'precio' => ['required', 'min:1'],
+        ]));
+
+        return redirect()->route('proyectos.index');
+        
+
     }
 
     /**
